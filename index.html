@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta name="author" content="Kamil Radosz">
+   <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+   <link rel="stylesheet" href="components.css">
+   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+   <script>
+      $().ready(function() {
+         var sName = "cookiesok";
+         $("#close-cookie-warn").click(function() {
+            var oExpire = new Date();
+            oExpire.setTime((new Date()).getTime() + 3600000 * 24 * 365);
+            document.cookie = sName + "=1;expires=" + oExpire;
+            $("#cookie-warn").hide("slow");
+         });
+
+         var sStr = '; ' + document.cookie + ';';
+         var nIndex = sStr.indexOf('; ' + escape(sName) + '=');
+         if (nIndex === -1) {
+            $("#cookie-warn").show();
+         }
+      });
+
+   </script>
+
+
+
+
+   <meta charset="UTF-8">
+
+   <title>Business Card - Kamil Radosz</title>
+</head>
+
+<body>
+   <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+   <div class="content">
+      <header>
+         <div class="container">
+            <nav class="navbar navbar-expand-md">
+               <a class="navbar-brand" href="#">
+                  Business Card
+               </a>
+
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3" aria-controls="navbarNav3" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+
+               <div class="collapse navbar-collapse" id="navbarNav3">
+                  <ul class="navbar-nav ml-auto">
+
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">About me</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Skills</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                     </li>
+                  </ul>
+
+                  <a class="btn btn-outline-primary ml-md-3" href="#">Button</a>
+               </div>
+            </nav>
+         </div>
+      </header>
+      <main>
+         <div class="shader">
+            <h1>Hi, I am Kamil.</h1>
+            <h2>I'm a web developer</h2>
+            <button class="about">>About me</button>
+         </div>
+
+      </main>
+      <section class="about" id="about">
+         <div class="aboutt">
+            <img src="img/about_me.jpg" alt="about me" class="img-about">
+            <div class="text-about">
+               <h3>About me</h3>
+               <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, inventore.</h4>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam totam blanditiis obcaecati maxime itaque odit minus dignissimos explicabo fuga nesciunt enim magni deleniti, possimus sequi temporibus, placeat recusandae. Amet doloremque illum ratione molestiae sapiente natus fugiat dolores corrupti numquam aut non, enim dignissimos iste placeat similique minus ipsum temporibus inventore adipisci provident officiis omnis laudantium quibusdam harum praesentium. Excepturi exercitationem animi totam ex sequi est ratione omnis atque quibusdam quo nulla voluptatibus cumque praesentium, corporis quod explicabo, mollitia natus qui.</p>
+            </div>
+
+            <div class="reset"></div>
+         </div>
+      </section>
+      <div class="motto">
+         <div class="shadow-motto">
+            <h5>,, Design is not just what it looks like and feels like. design is how it works. "</h5>
+            <p class="steve">~Steve Jobs</p>
+         </div>
+
+      </div>
+      <section class="fdb-block">
+         <div class="container">
+            <div class="row text-center">
+               <div class="col-12">
+                  <h1>My skills</h1>
+               </div>
+            </div>
+            <div class="row text-center justify-content-center mt-5">
+               <div class="col-12 col-md-4 col-lg-3 m-md-auto">
+                  <h3><strong>HTML</strong></h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eos, quidem ad quis qui modi, voluptatum? Provident dignissimos possimus accusamus impedit facilis dolores consequatur at culpa sed ipsa.</p>
+               </div>
+
+               <div class="col-12 col-md-4 col-lg-3 m-md-auto pt-3 pt-md-0">
+                  <h3><strong>CSS</strong></h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, esse alias, dolore eum deleniti quae ducimus, sint animi nemo optio laborum!.</p>
+               </div>
+
+               <div class="col-12 col-md-4 col-lg-3 m-md-auto pt-3 pt-md-0">
+                  <h3><strong>Javascript</strong></h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dolorem quasi praesentium cupiditate non, veritatis quo beatae debitis et necessitatibus.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <footer class="fdb-block footer-large
+     footers">
+         <div class="container">
+            <div class="row text-center">
+               <div class="col">
+                  <h3>Kamil Radosz</h3>
+
+                  <p>Poland</p>
+                  <p>692 812 437</p>
+               </div>
+            </div>
+
+            <div class="row mt-4">
+               <div class="col text-center">
+                  <p class="lead">
+                     <a href="#" class="mx-2"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                     <a href="#" class="mx-2"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                     <a href="#" class="mx-2"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                     <a href="#" class="mx-2"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+                     <a href="#" class="mx-2"><i class="fab fa-google" aria-hidden="true"></i></a>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+   </div>
+   <section id="cookie-warn">
+      <p><strong>UWAGA!</strong> Niniejsza strona wykorzystuje pliki cookies.
+         Informacje uzyskane za pomocą cookies wykorzystywane są głównie
+         w celach statystycznych. Pozostając na stronie godzisz się na
+         ich zapisywanie w Twojej przeglądarce.
+         <a href="javascript:void(0);" id="close-cookie-warn">Zamknij ostrzeżenie</a></p>
+   </section>
+
+</body>
+
+</html>
